@@ -2,7 +2,7 @@
   "name": "rjs101x_assignment1",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://rjs101xbackend.herokuapp.com",
+  "homepage":"http://doanvanmy2302.github.io",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -13,6 +13,7 @@
     "cross-fetch": "2.1.0",
     "dateformat": "4.5.1",
     "font-awesome": "4.7.0",
+    "gh-pages": "^3.2.3",
     "prop-types": "15.6.0",
     "react": "^17.0.2",
     "react-animation-components": "3.0.0",
@@ -30,10 +31,12 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "react-script --openssl-legacy-providers start",
+    "build": "react-scripts --openssl-legacy-provider build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b main -d build"
   },
   "eslintConfig": {
     "extends": [
